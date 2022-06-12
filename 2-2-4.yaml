@@ -1,0 +1,8 @@
+---
+- name: '2.2.4 | Ensure Avahi Server is not enabled (Scored)'
+  systemd:
+    name: avahi-daemon
+    state: stopped
+    enabled: no
+  when:
+    - "'avahi-daemon.service' in ansible_facts.services"
