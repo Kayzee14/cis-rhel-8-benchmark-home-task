@@ -1,0 +1,8 @@
+---
+- name: '2.2.18 | Ensure mail transfer agent is configured for local-only mode (Scored)'
+  lineinfile:
+    dest: /etc/postfix/main.cf
+    regexp: '^(#)?inet_interfaces'
+    line: 'inet_interfaces = loopback-only'
+  when:
+    - "'postfix' in ansible_facts.packages"
