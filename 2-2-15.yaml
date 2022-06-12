@@ -1,0 +1,8 @@
+---
+- name: '2.2.15 | Ensure DHCP Server is not enabled (Scored)'
+  systemd:
+    name: dhcpd
+    state: stopped
+    enabled: no
+  when:
+    - "'dhcpd.service' in ansible_facts.services"
