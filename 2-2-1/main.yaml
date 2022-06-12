@@ -1,0 +1,15 @@
+---
+- name: '2.2.1.1 | Ensure time synchronization is in use (Not Scored)'
+  dnf:
+    name: chrony
+    state: present
+
+- name: "2.2.1.2 | Ensure chrony is configured (Scored)"
+  template:
+    src: chrony.conf
+    dest: /etc/chrony.conf
+    owner: root
+    group: root
+    mode: 0644
+
+
