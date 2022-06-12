@@ -1,0 +1,8 @@
+---
+- name: '2.2.11 | Ensure DNS Server is not enabled (Scored)'
+  systemd:
+    name: named
+    state: stopped
+    enabled: no
+  when:
+    - "'named.service' in ansible_facts.services"
