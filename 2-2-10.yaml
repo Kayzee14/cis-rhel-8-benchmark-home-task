@@ -1,0 +1,8 @@
+---
+- name: '2.2.10 | Ensure FTP Server is not enabled (Scored)'
+  systemd:
+    name: vsftpd
+    state: stopped
+    enabled: no
+  when:
+    - "'vsftpd.service' in ansible_facts.services"
