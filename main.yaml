@@ -1,0 +1,29 @@
+---
+- hosts: localhost
+  connection: local
+  tasks:
+  - name: Populate service facts
+    service_facts:
+  
+  - name: Populate package facts
+    package_facts:
+
+  -  include: "2-2-1/main.yaml"
+  -  include: "2-2-2.yaml"
+  -  include: "2-2-3.yaml"
+  -  include: "2-2-4.yaml"
+  -  include: "2-2-5.yaml"
+  -  include: "2-2-6.yaml"
+  -  include: "2-2-7.yaml"
+  -  include: "2-2-8.yaml"
+  -  include: "2-2-9.yaml"
+  -  include: "2-2-10.yaml"
+  -  include: "2-2-11.yaml"
+  -  include: "2-2-12.yaml"
+  -  include: "2-2-13.yaml"
+  -  include: "2-2-14.yaml"
+  -  include: "2-2-15.yaml"
+  -  include: "2-2-16.yaml"
+  -  include: "2-2-17.yaml"
+  -  include: "2-2-18.yaml"
+
