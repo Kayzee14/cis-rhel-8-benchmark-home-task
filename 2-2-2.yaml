@@ -1,0 +1,7 @@
+- name: '2.2.2 | Ensure X Window System is not installed (Scored)'
+  block:
+    - name: '2.2.2 | Ensure X Window System is not installed (Scored)'
+      package:
+        state: absent
+        name:
+          - 'xorg-x11*'
