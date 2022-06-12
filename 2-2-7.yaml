@@ -1,0 +1,8 @@
+---
+- name: '2.2.7 | Ensure Samba is not enabled (Scored)'
+  systemd:
+    name: smb
+    state: stopped
+    enabled: no
+  when:
+    - "'smb.service' in ansible_facts.services"
